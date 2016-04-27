@@ -35,7 +35,7 @@ var App = React.createClass({
     }
   },
 
-  stop: function() {
+  pause: function() {
     if (this.state.running == true) {
       this.setState({running: false});
     }
@@ -59,7 +59,7 @@ var App = React.createClass({
         <Countdown countdown={this.state.countdown} />
         <SessionPicker setLongSession={this.setLongSession} setShortSession={this.setShortSession}/>
         
-        <MeditateActions running={this.state.running} start={this.start} stop={this.stop} reset={this.reset} />
+        <MeditateActions running={this.state.running} start={this.start} pause={this.pause} reset={this.reset} />
       </div>
     );
   }

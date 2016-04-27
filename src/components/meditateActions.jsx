@@ -7,7 +7,7 @@ var MeditateActions = React.createClass({
     if (this.props.running) {
       buttons = (
         <div>
-          <button onClick={this.props.stop}>Stop</button>
+          <button onClick={this.props.pause}>Pause</button>
           <button onClick={this.props.reset}>Reset</button>
         </div>
       )
