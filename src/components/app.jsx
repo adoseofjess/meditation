@@ -2,14 +2,15 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var SessionPicker = require('./sessionPicker');
 var MeditateActions = require('./meditateActions');
+var Countdown = require('./countdown');
 
 var App = React.createClass({
   getInitialState: function() {
     return {
-      longSessionCountdown: 500,
-      shortSessionCountdown: 100,
-      originalCountdown: 100,
-      countdown: 100,
+      longSessionCountdown: 1200,
+      shortSessionCountdown: 300,
+      originalCountdown: 300,
+      countdown: 300,
       running: false
     }
   },
@@ -55,7 +56,7 @@ var App = React.createClass({
     return(
       <div>
         <h1>My Meditation Countdown Timer</h1>
-        <div>Countdown: {this.state.countdown}</div>
+        <Countdown countdown={this.state.countdown} />
         <SessionPicker setLongSession={this.setLongSession} setShortSession={this.setShortSession}/>
         
         <MeditateActions running={this.state.running} start={this.start} stop={this.stop} reset={this.reset} />
