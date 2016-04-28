@@ -29,6 +29,10 @@ var App = React.createClass({
     this.setState({originalCountdown: this.state.shortSessionCountdown, countdown: this.state.shortSessionCountdown, running: false})
   },
 
+  updateCountdown: function(seconds) {
+    this.setState({countdown: this.state.countdown + seconds});
+  },
+
   start: function() {
     if (this.state.running == false) {
       this.setState({running: true});
@@ -56,7 +60,7 @@ var App = React.createClass({
     return(
       <div>
         <h1>My Meditation Countdown Timer</h1>
-        <Countdown countdown={this.state.countdown} />
+        <Countdown countdown={this.state.countdown} updateCountdown={this.updateCountdown} />
         <SessionPicker setLongSession={this.setLongSession} setShortSession={this.setShortSession}/>
         
         <MeditateActions running={this.state.running} start={this.start} pause={this.pause} reset={this.reset} />

@@ -13,7 +13,11 @@ var Countdown = React.createClass({
     
     return(
       <div>
-        <div>{this.formatTime(this.props.countdown)}</div>
+        {this.formatTime(this.props.countdown)}
+        <button onClick={this.props.updateCountdown.bind(null, 60)}>Add minute</button>
+        <button onClick={this.props.updateCountdown.bind(null, -60)}>Subtract minute</button>
+        <button onClick={this.props.updateCountdown.bind(null, 1)}>Add second</button>
+        <button onClick={this.props.updateCountdown.bind(null, -1)}>Subtract second</button>
       </div>
     );
   }
