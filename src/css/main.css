@@ -1,9 +1,13 @@
+body {
+  background-image: url("../../images/lotus.jpg"); 
+}
+
 #main {
   margin-top: 70px;
 }
 
 .time {
-  font-size: 12em;
+  font-size: 16em;
   font-weight: bold;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
