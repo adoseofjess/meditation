@@ -39,7 +39,9 @@ var Container = React.createClass({
   },
 
   updateCountdown: function(seconds) {
-    this.setState({originalCountdown: this.state.originalCountdown + seconds, countdown: this.state.countdown + seconds});
+    if (this.state.countdown + seconds >= 0) {
+      this.setState({originalCountdown: this.state.originalCountdown + seconds, countdown: this.state.countdown + seconds});
+    }
   },
 
   start: function() {
