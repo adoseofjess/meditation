@@ -5,8 +5,8 @@ var SessionPicker = React.createClass({
   render: function () {
     return(
       <div>
-        <button onClick={this.props.setLongSession}>Long Session</button>
-        <button onClick={this.props.setShortSession}>Short Session</button>
+        <button className="btn btn-info btn-sm" onClick={this.props.setLongSession}>Long Session</button>
+        <button className="btn btn-info btn-sm" onClick={this.props.setShortSession}>Short Session</button>
       </div>
     );
   }

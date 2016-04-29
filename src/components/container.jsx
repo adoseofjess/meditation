@@ -19,7 +19,13 @@ var Container = React.createClass({
     if (this.state.running) {
       this.setState({countdown: this.state.countdown - 1});
     }
-    if (this.state.countdown == 0) {
+    
+    if (this.state.countdown <= 0) {
+      if (this.state.running == true) {
+        var sound = document.getElementById("audio");
+        sound.play();
+      }
+
       this.setState({running: false})
     }
   },
@@ -61,7 +67,7 @@ var Container = React.createClass({
 
   render: function () {
     return(
-      <div>
+      <div className="container">
         <Countdown countdown={this.state.countdown} updateCountdown={this.updateCountdown} />
         <SessionPicker setLongSession={this.setLongSession} setShortSession={this.setShortSession}/>
         

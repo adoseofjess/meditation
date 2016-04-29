@@ -14,10 +14,10 @@ var Countdown = React.createClass({
     return(
       <div className="countdown">
         <div className="time">{this.formatTime(this.props.countdown)}</div>
-        <button onClick={this.props.updateCountdown.bind(null, 60)}>Add minute</button>
-        <button onClick={this.props.updateCountdown.bind(null, -60)}>Subtract minute</button>
-        <button onClick={this.props.updateCountdown.bind(null, 1)}>Add second</button>
-        <button onClick={this.props.updateCountdown.bind(null, -1)}>Subtract second</button>
+        <button className="btn btn-default btn-sm" onClick={this.props.updateCountdown.bind(null, 60)}>Add minute</button>
+        <button className="btn btn-default btn-sm" onClick={this.props.updateCountdown.bind(null, -60)}>Subtract minute</button>
+        <button className="btn btn-default btn-sm" onClick={this.props.updateCountdown.bind(null, 1)}>Add second</button>
+        <button className="btn btn-default btn-sm" onClick={this.props.updateCountdown.bind(null, -1)}>Subtract second</button>
       </div>
     );
   }

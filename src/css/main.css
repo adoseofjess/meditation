@@ -6,8 +6,16 @@ body {
   margin-top: 70px;
 }
 
+.container {
+
+}
+
 .time {
   font-size: 16em;
   font-weight: bold;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.btn {
+  margin: 10px 1px;
 }
