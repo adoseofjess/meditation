@@ -19,6 +19,9 @@ var Container = React.createClass({
     if (this.state.running) {
       this.setState({countdown: this.state.countdown - 1});
     }
+    if (this.state.countdown == 0) {
+      this.setState({running: false})
+    }
   },
 
   setLongSession: function() {
