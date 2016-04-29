@@ -7,7 +7,6 @@ var App = React.createClass({
   render: function () {
     return(
       <div>
-        <h1>My Meditation Countdown App Timer</h1>
         <Container />
       </div>
     );

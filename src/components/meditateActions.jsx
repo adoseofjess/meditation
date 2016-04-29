@@ -13,7 +13,7 @@ var MeditateActions = React.createClass({
       )
     } else {
       buttons = (
-        <button onClick={this.props.start}>Start</button>
+        <button className="btn btn-success btn-lg" onClick={this.props.start}>Start</button>
       )
     }
     return(
